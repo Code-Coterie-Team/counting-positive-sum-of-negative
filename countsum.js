@@ -10,9 +10,14 @@ function countPositivesSumNegatives(input) {
         sumNegative += element;
         }
     });
-const arr = [countPositives,sumNegative];
-    return arr
+let arr = [countPositives,sumNegative];
+arr.forEach(element =>{
+    if (element == 0){
+        arr = [];
+    }
+})
+return arr;
     }
 
-let result = countPositivesSumNegatives([1]);
+let result = countPositivesSumNegatives([1,3,-4]);
 console.log(result);
